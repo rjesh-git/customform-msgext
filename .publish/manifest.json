@@ -1,0 +1,94 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.6/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.6",
+    "version": "{version}",
+    "showLoadingIndicator": false,
+    "id": "954a9b40-9941-11ea-9c66-5db51d736bc5",
+    "packageName": "customformmsgext",
+    "developer": {
+        "name": "Core BTS",
+        "websiteUrl": "{baseUrl0}/",
+        "privacyUrl": "{baseUrl0}/privacy.html",
+        "termsOfUseUrl": "{baseUrl0}/tou.html"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "{appname}",
+        "full": "{fullappname}"
+    },
+    "description": {
+        "short": "TODO: add short description here",
+        "full": "TODO: add full description here"
+    },
+    "accentColor": "#D85028",
+    "bots": [
+        {
+            "botId": "{botId0}",
+            "scopes": [
+                "team",
+                "personal"
+            ],
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal"
+                    ],
+                    "commands": [
+                        {
+                            "title": "Help",
+                            "description": "Shows help information"
+                        }
+                    ]
+                },
+                {
+                    "scopes": [
+                        "team"
+                    ],
+                    "commands": [
+                        {
+                            "title": "Help",
+                            "description": "Shows help information"
+                        }
+                    ]
+                }
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false
+        }
+    ],
+    "composeExtensions": [
+        {
+            "botId": "{botId0}",
+            "canUpdateConfiguration": false,
+            "commands": [
+                {
+                    "id": "conveyMessageMessageExtension",
+                    "type": "action",
+                    "title": "convey message",
+                    "description": "Add a clever description here",
+                    "initialRun": true,
+                    "fetchTask": true,
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "param",
+                            "title": "param",
+                            "description": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}
